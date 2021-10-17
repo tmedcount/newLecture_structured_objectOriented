@@ -6,7 +6,7 @@ public class Exam {
 	int math;
 	
 	public Exam() {
-		this(0, 0, 0); // 집중화
+		this(0,0,0); // 집중화
 	}
 	
 	public Exam(int kor, int eng, int math) {
@@ -17,7 +17,7 @@ public class Exam {
 	public int getKor() {
 		return kor;
 	}
-	public void setKor(int kor1) {
+	public void setKor(int kor) {
 		this.kor = kor;
 	}
 	public int getEng() {

@@ -17,7 +17,7 @@ public class Exam {
 	public int getKor() {
 		return kor;
 	}
-	public void setKor(int kor1) {
+	public void setKor(int kor) {
 		this.kor = kor;
 	}
 	public int getEng() {
