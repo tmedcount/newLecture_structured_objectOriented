@@ -32,14 +32,15 @@ public abstract class Exam {
 	public void setMath(int math) {
 		this.math = math;
 	}
-	public int total() {
+	
+	public abstract int total(); // 추상메소드
+	
+	protected int onTotal() { // 자식에게만 공유
 		
-		return kor+eng+math;
+		return kor + eng + math;
 	}
-	public float avg() {
-		
-		return this.total()/3.0f; // this 생략 가능.
-	}
+	
+	public abstract float avg();
 	
 	
 }
