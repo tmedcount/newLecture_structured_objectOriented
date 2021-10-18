@@ -2,19 +2,19 @@ package part3.ex5.abstract_;
 
 import java.util.Scanner;
 
-public class ExamConsole {
+public abstract class ExamConsole {
 	
 	private ExamList list = new ExamList();
 	
-	public void printList() {
-		this.printList(list.size()); // 집중화
+	public void print() {
+		this.print(list.size()); // 집중화
 	}
 	
 //	static void printList(ExamList list) {
 //		printList(list, list.current); // 집중화
 //	}
 	
-	public void printList(int size) { // overloading
+	public void print(int size) { // overloading
 		System.out.println("┌──────────────────────────────────────────────┐");
         System.out.println("│                    성적 출력                                                      │");
         System.out.println("└──────────────────────────────────────────────┘");
@@ -72,7 +72,7 @@ public class ExamConsole {
 //	}
 
 	
-	public void inputList() {
+	public void input() {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("┌──────────────────────────────────────────────┐");
@@ -118,14 +118,20 @@ public class ExamConsole {
 	        */
 			
 			// Exam exam = new Exam(kor, eng, math);
-	        
+	        Exam exam = makeExam();
+	        exam.setKor(kor);
+	        exam.setEng(eng);
+	        exam.setMath(math);
+			
 			/*----add--------------------------------------------------*/
 			
-	        // list.add(exam);
+	        list.add(exam);
 	        
 	        System.out.println("────────────────────────────────────────────────");
         
 	}
+
+	protected abstract Exam makeExam();
 	
 //	static void inputList(ExamList list) {
 //		Scanner scan = new Scanner(System.in);
